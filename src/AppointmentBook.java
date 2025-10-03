@@ -18,7 +18,7 @@ public class AppointmentBook {
         return -1;
     }
 
-    public boolean reserveBlock(int startMinute, int period, int duration)
+    public boolean reserveBlock(int period, int startMinute, int duration)
     {
         for(int i=startMinute; i<startMinute + duration; i++)
         {
