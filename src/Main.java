@@ -3,8 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         boolean[][] schedule = new boolean[8][60];
         AppointmentBook a = new AppointmentBook(schedule);
 
@@ -37,8 +36,24 @@ public class Main {
         /**
          * Start of appointmentBook exercise
          */
+        String schedule = "";
+        public static int read () throws FileNotFoundException {
+            int meetings = 0;
+            File f = new File("Schedules.txt");
+            Scanner s = new Scanner(f);
+            while (s.hasNext()) {
+                while (s.hasNextBoolean()) {
+                    schedule += s.nextBoolean() + " ";
+                }
+            }
+        }
+        AppointmentBook a = new AppointmentBook(readSchedule(schedule));
 
+        public static boolean [][] readSchedule(String lines){
+            Scanner s = new Scanner(lines);
+            boolean[][] schedule = new Boolean[8][60];
 
+        }
 
     }
 
